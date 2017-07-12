@@ -1,0 +1,39 @@
+#php_value max_input_vars "10000"
+#php_flag track_vars off 
+
+AddType x-mapp-php5 .php
+AddHandler x-mapp-php5 .php
+
+Options +FollowSymLinks
+
+
+	RewriteEngine on
+	RewriteBase /
+
+
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType text/php "now"
+	ExpiresDefault "access plus 10 years"
+</IfModule>
+
+##############################################################################################
+# directories that need to be accessible
+##############################################################################################
+RewriteRule ^ajax/(.*)$ ajax/$1 [L]
+RewriteRule ^css/(.*)$ css/$1 [L]
+RewriteRule ^images/(.*)$ images/$1 [L]
+RewriteRule ^js/(.*)$ js/$1 [L]
+RewriteRule ^amazontest/(.*)$ amazontest/$1 [L]
+
+##############################################################################################
+# rewrite /test/function/ to test-function.inc.php
+##############################################################################################
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ index.php?func=$1&subfunc=$2&param1=$3&param2=$4&param3=$5&param4=$6 [L]
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/(.*)/$ index.php?func=$1&subfunc=$2&param1=$3&param2=$4&param3=$5 [L]
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/$ index.php?func=$1&subfunc=$2&param1=$3&param2=$4 [L]
+RewriteRule ^(.*)/(.*)/(.*)/$ index.php?func=$1&subfunc=$2&param1=$3 [L]
+RewriteRule ^(.*)/(.*)/$ index.php?func=$1&subfunc=$2 [L]
+RewriteRule ^(.*)/$ index.php?func=$1 [L]
+

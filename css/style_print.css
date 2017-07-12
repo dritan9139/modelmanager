@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+div#navi {
+	display: none;	
+}
+div#suchergebnis,
+div#exportlist {
+	overflow: visible;	
+	height: auto;
+}

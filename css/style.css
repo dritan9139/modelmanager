@@ -1,0 +1,1024 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	font-family:Verdana,Arial,Sans-serif;
+	font-size:12px;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+u {
+	cursor: pointer;
+}
+h1{
+	margin-bottom:2px;
+	font-size:18px;
+	text-align: center;
+}
+input{
+	border: 1px solid grey;
+	background-color: silver;
+}
+input[type="submit"] {
+	/* padding: 3px */;
+}
+input[type="button"] {
+	cursor: pointer;
+}
+
+select{
+	border: 1px solid grey;
+	background-color: silver;
+}
+table {
+	text-align: left;
+	width: 100%;
+	border-collapse:collapse;
+}
+table th{
+	text-align: left;
+	padding: 2px;
+	background-color: #9999FF;
+}
+table td{
+	text-align: left;
+	padding: 2px;
+}
+table tr.hell  {
+	background-color: silver;
+}
+
+option.hell  {
+	background-color: #D4D0C8;
+}
+
+table tr.markiert  {
+	border-top : 2px dotted black;
+	border-bottom : 2px dotted black;
+	border-left-style: 0px;
+	border-right-style: 0px;
+}
+
+.hidden{
+	display:none;
+	}
+div .center{
+	text-align:center;
+	}
+
+/* *************************** */
+/* ********* navigation ****** */
+/* *************************** */
+div#navi{				
+	padding-top: 0px;
+	padding-bottom:0px;
+	width:100%;
+	background:silver;
+	border-bottom: 4px double black;
+	margin-bottom: 5px;
+	margin-top: -20px;
+}
+div#navi ul{
+	margin-left: 10px;
+	margin-right: 20px;
+	height: 20px;
+	list-style-type:none;
+}
+div#navi ul li{
+	width: auto;
+	margin-right:10px;
+	float:left;
+	padding: 3px;
+}	
+div#navi ul li.ueberschrift {
+	font-weight: normal;
+}
+div#navi ul.topnavi{
+	background:grey;
+	height: 32px;
+}
+div#navi ul.topnavi li{
+	padding:4px 8px 4px 8px;
+}
+div#navi ul.topnavi li a {
+	font-size:18px;
+}
+div#navi ul.topnavi li.active,
+div#navi ul.secondnavi li.active {
+	font-weight: bold;
+}
+div#navi li.lager{
+	float:right;
+}
+/* *************************** */
+/* ******* suchergebnise ***** */
+/* *************************** */
+div#suchergebnis,
+div#exportlist {	
+	border: 1px solid black;
+	height: 700px;
+	text-align:center;
+	background:#d4d0c8;
+	margin-bottom:5px;
+	overflow:auto;
+}
+
+div#suchergebnis .togglegroup,
+div#suchergebnis .refreshgroup {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* ******************************** **/
+/* ********* suchformular ********* **/
+/* ******************************** **/
+fieldset.searchparams {
+	margin: 4px;
+	padding: 4px;
+}
+fieldset.searchparams legend {
+	font-weight: bold;
+}
+fieldset.searchparams div {
+	float: left;
+	width: 310px;
+	height: 16px;
+	padding: 2px 0 2px 0;
+}
+fieldset.searchparams div.even {
+	background-color: #d4d0c8;
+}
+fieldset.searchparams div.odd {
+	background-color: white;
+}
+fieldset.searchparams label {
+	display: block;
+	width: 120px;
+	float: left;
+}
+fieldset.searchparams span {
+	display: block;
+	float: left;
+}
+fieldset.searchparams input[type="text"] {
+	width: 80px;
+}
+fieldset.searchbuttons {
+	margin: 4px;
+	padding: 4px;	
+	text-align: center;
+}
+fieldset.searchbuttons hr {
+	margin: 3px;
+}
+
+/* *************************** */
+/* ****** kundentabellen ***** */
+/* *************************** */
+
+/** ************************************************************ **/
+/** ******************* scrollable tables ********************** **/
+/** ************************************************************ **/
+
+/* define height and width of scrollable area. Add 16px to width for scrollbar */
+div.tableContainer {
+	margin: 0 auto;
+	clear: both;
+	border: 1px solid #963;
+	height: 660px;
+	overflow: auto;
+	width: 99%
+	background-color: #9999FF;	
+}
+/* Reset overflow value to hidden for all non-IE browsers. */
+html>body div.tableContainer {
+	overflow: hidden;
+	width: 99%
+}
+/* define width of table. IE browsers only                 */
+div.tableContainer table {
+	float: left;
+	width: 100%
+}
+/* define width of table. Add 16px to width for scrollbar.           */
+/* All other non-IE browsers.                                        */
+html>body div.tableContainer table {
+	width: 100%
+}
+/* set table header to a fixed position. WinIE 6.x only                                       */
+/* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+/* an element that has an overflow property set, the relative value translates into fixed.    */
+/* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+thead.fixedHeader tr {
+	position: relative
+}
+/* set THEAD element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+html>body thead.fixedHeader tr {
+	display: block
+}
+/* make the TH elements pretty */
+thead.fixedHeader {
+	background-color: #9999FF;
+}
+thead.fixedHeader th {
+	border-left: 1px solid #EB8;
+	border-right: 1px solid #B74;
+	border-top: 1px solid #EB8;
+	font-weight: bold;
+	padding: 4px 3px;
+	text-align: left
+}
+/* make the A elements pretty. makes for nice clickable headers                */
+thead.fixedHeader a, thead.fixedHeader a:link, thead.fixedHeader a:visited {
+	color: #FFF;
+	display: block;
+	text-decoration: none;
+	width: 100%
+}
+/* make the A elements pretty. makes for nice clickable headers                */
+/* WARNING: swapping the background on hover may cause problems in WinIE 6.x   */
+thead.fixedHeader a:hover {
+	color: #FFF;
+	display: block;
+	text-decoration: underline;
+	width: 100%
+}
+/* define the table content to be scrollable                                              */
+/* set TBODY element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+/* induced side effect is that child TDs no longer accept width: auto                     */
+html>body tbody.scrollContent {
+	display: block;
+	height: 637px;
+	overflow: auto;
+	width: 100%
+}
+/* make TD elements pretty. Provide alternating classes for striping the table */
+/* http://www.alistapart.com/articles/zebratables/                             */
+tbody.scrollContent td, 
+tbody.scrollContent tr.normalRow td {
+	background: #C0C0C0;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+tbody.scrollContent tr.alternateRow td {
+	background: #D4D0C8;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+tr.alternateRow td {
+	background: #D4D0C8;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 2px 3px 2px
+}
+/* define width of TH elements: 1st, 2nd, and 3rd respectively.          */
+/* Add 16px to last TH for scrollbar padding. All other non-IE browsers. */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
+/* 
+html>body thead.fixedHeader th {
+	width: 200px
+}
+html>body thead.fixedHeader th + th {
+	width: 240px
+}
+html>body thead.fixedHeader th + th + th {
+	width: 316px
+}
+define width of TD elements: 1st, 2nd, and 3rd respectively.         
+All other non-IE browsers.                                           
+http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors       
+html>body tbody.scrollContent td {
+	width: 200px
+}
+html>body tbody.scrollContent td + td {
+	width: 240px
+}
+html>body tbody.scrollContent td + td + td {
+	width: 300px
+} 
+*/
+
+/** *** kunden functions below the customer list *** **/
+div.kundenfunctions {
+	margin-top: 4px;	
+	border: 1px solid grey;
+	padding: 3px;
+	width: 99%;
+	margin: 2px auto 0 auto;
+}
+
+html>body thead.fixedHeader th, 
+html>body tbody.scrollContent td {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.kundenunbezahlt td div,
+.kundenzuversenden td div,
+.kundenoffen td div {
+	overflow: hidden; 
+	width: inherit;	
+}
+/** ********* kundenunbezahlt *********** **/
+.kundenunbezahlt thead.fixedHeader .first {
+	width: 73px;
+}
+.kundenunbezahlt tbody.scrollContent .first {
+	width: 74px;
+}
+.kundenunbezahlt .second {
+	width: 96px;
+}
+.kundenunbezahlt .third {
+	width: 105px;
+}
+.kundenunbezahlt .forth {
+	width: 153px;
+}
+.kundenunbezahlt .fifth {
+	width: 137px;
+}
+.kundenunbezahlt .sixth {
+	width: 44px;
+}
+.kundenunbezahlt .seventh {
+	width: 36px;
+}
+.kundenunbezahlt .eigth {
+	width: 115px;
+}
+.kundenunbezahlt .ninth {
+	width: 15px;
+}
+.kundenunbezahlt .tenth {
+	width: 152px;
+}
+.kundenunbezahlt .eleventh {
+	width: auto;
+}
+.kundenunbezahlt table .twelth {
+	
+}
+/** ********* kundenoffen *********** **/
+.kundenoffen thead.fixedHeader .first {
+	width: 73px;
+}
+.kundenoffen tbody.scrollContent .first {
+	width: 74px;
+}
+.kundenoffen .second {
+	width: 74px;
+}
+.kundenoffen .third {
+	width: 150px;
+}
+.kundenoffen .forth {
+	width: 50px;
+}
+.kundenoffen .fifth {
+	width: 85px;
+}
+.kundenoffen .sixth {
+	width: 120px;
+}
+.kundenoffen .seventh {
+	width: 50px;
+}
+.kundenoffen .eigth {
+	width: 50px;
+}
+.kundenoffen .ninth {
+	width: 80px;
+}
+.kundenoffen .tenth {
+	width: 110px;
+}
+.kundenoffen .eleventh {
+	width: 200px;
+}
+.kundenoffen .twelfth {
+	width: auto;
+}
+/** ********* kundenzuversenden *********** **/
+.kundenzuversenden thead.fixedHeader .first {
+	width: 73px;
+}
+.kundenzuversenden tbody.scrollContent .first {
+	width: 74px;
+}
+.kundenzuversenden .second {
+	width: 74px;
+}
+.kundenzuversenden .third {
+	width: 150px;
+}
+.kundenzuversenden .forth {
+	width: 85px;
+}
+.kundenzuversenden .fifth {
+	width: 200px;
+}
+.kundenzuversenden .sixth {
+	width: 150px;
+}
+.kundenzuversenden .seventh {
+	width: 50px;
+}
+.kundenzuversenden .eigth { 
+	width: 50px;	
+}
+.kundenzuversenden .ninth { 
+	width: 115px;
+}
+.kundenzuversenden .tenth {
+	width: 100px;	
+}
+.kundenzuversenden .eleventh { 
+	width: auto;		
+}
+.kundenzuversenden .twelfth { 
+	width: auto;		
+}
+/** ********* kundensuchen *********** **/
+div.kundensuchen {
+	height: 560px;
+}
+div.kundensuchen tbody.scrollContent {
+	height: 540px;
+}
+.kundensuchen thead.fixedHeader .first {
+	width: 90px;
+}
+.kundensuchen tbody.scrollContent .first {
+	width: 90px;
+}
+.kundensuchen .second {
+	width: 70px;
+}
+.kundensuchen .third {
+	width: 90px;
+}
+.kundensuchen .forth {
+	width: 110px;
+}
+.kundensuchen .fifth {
+	width: 90px;
+}
+.kundensuchen .sixth {
+	width: 150px;
+}
+.kundensuchen .seventh {
+	width: 160px;
+}
+.kundensuchen .eigth { 
+	width: 180px;	
+}
+.kundensuchen .ninth { 
+	width: 55px;
+}
+.kundensuchen .tenth {
+	width: 55px;	
+}
+.kundensuchen .eleventh { 
+	width: 120px;		
+}
+.kundensuchen .twelfth { 
+	width: 140px;		
+}
+.kundensuchen .thirteenth { 
+	width: auto;		
+}
+/** ********* lager *********** **/
+.lager thead.fixedHeader .first {
+	width: 230px;
+}
+.lager tbody.scrollContent .first {
+	width: 230px;
+}
+.lager .second {
+	width: 500px;
+}
+.lager .third {
+	width: 180px;
+}
+.lager .third input[type="text"] {
+	width: 60px;
+	height: 22px;
+}
+.lager .third input[type="submit"] {
+	
+}
+.lager .forth {
+	width: 75px;
+}
+.lager .fifth {
+	width: 75px;
+}
+.lager .sixth {
+	width: 75px;
+}
+.lager .seventh {
+	width: 75px;
+}
+/** ********* lager-unterartikel *********** **/
+.lager .allsame {
+	width: 120px;
+}
+/** ********* stocklevel *********** **/
+.stocklevel thead.fixedHeader .first {
+	width: 120px;
+}
+.stocklevel tbody.scrollContent .first {
+	width: 120px;
+}
+.stocklevel .second {
+	width: 60px;
+}
+.stocklevel .third {
+	width: 120px;
+}
+.stocklevel input {
+	margin-top: 2px;
+}
+.stocklevel input[type="text"] {
+	height: 22px;
+	width: auto;
+}
+.stocklevel input[type="submit"],
+.stocklevel input[type="button"] {
+	height: 24px;
+	width: auto;
+}
+.stocklevel .forth {
+	width: auto;
+}
+.stocklevel .fifth {
+	width: 200px;
+}
+.stocklevel input.stocklevel {
+	width: 60px;
+	text-align: right; 
+}
+
+
+/* *************************** */
+/* ******* artikelliste ****** */
+/* *************************** */
+div.artikelliste {
+	border: 1px solid black;
+	height: 650px;
+	width: 900px;
+	text-align:center;
+	background:#d4d0c8;
+	margin-bottom:5px;
+	overflow:auto;
+	position: absolute;
+	left: 370px;
+}
+div.artikelliste th {
+	vertical-align: bottom;
+}
+div.artikelliste td {
+	vertical-align: top;	
+}
+div.artikelliste .anz {
+	width: 30px;
+	text-align: center;
+}
+div.artikelliste .anz input {
+	text-align: center;
+}
+div.artikelliste th.artikel {
+	width: 70px;
+	text-align: center; 	
+}
+div.artikelliste td.artikel {
+	width: 70px;
+}
+div.artikelliste .bezeichnung {
+	
+}
+div.artikelliste .preise {
+	width: 70px;
+	text-align: center;
+}
+div.artikelliste .preise input {
+	width: 50px;
+	text-align: right;	
+}
+div.artikelliste .daten {
+	width: 100px;
+	text-align: right;
+}
+div.artikelliste .daten input {
+	text-align: center;
+	width: 80px;
+}
+div.artikelliste .zahlungsbestellart {
+	text-align: right; 
+	width: 100px;
+}
+div.artikelliste .zahlungsbestellart select  {
+	width: 80px;	
+}
+div.artikelliste .loeschen {
+	width: 30px;
+	text-align: center;
+}
+
+/* *************************** */
+/* ******* kundendetail ****** */
+/* *************************** */
+div.kundendetail {
+	height: 650px;
+	width: 340px;
+	border: 1px solid black;
+	background-color: #D4D0C8;
+	margin-left: 15px;
+}
+div.kundendetail table {
+	margin: 0 auto;
+}
+div.kundendetail table th {
+	background-color: #D4D0C8;
+	width: 120px;
+}
+
+div.kundendetail table tr input.breit{
+	width: 178px;
+}
+
+div.kundendetail table tr.hell th {
+	background-color: silver;
+}
+div.kundendetail table select {
+	width: 180px;
+}
+div.kundendetail p {
+	margin-top: 70px;
+}
+
+/* ******************************************** */
+/* ******* leiste mit Buttons ganz unten ****** */
+/* ******************************************** */
+.funktionen {
+/*	
+	position: absolute;
+	bottom: 10px;
+ */
+	margin-top: 5px;
+	text-align: center;
+	background-color: #D4D0C8;
+	width: 100%;
+	padding: 8px 0; 
+}
+
+/* ************************************* */
+/* ******* impexp/listegenerieren ****** */
+/* ************************************* */
+div#exportlist table .first {
+	width: 150px;
+}
+div#exportlist table .second {
+	width: 250px;
+}
+div#exportlist table .third {
+	text-align: right;
+}
+/* *************************** */ 
+/* ********* lager *********** */
+/* *************************** */
+
+div.lager th {
+	text-align: center;	
+}
+	
+.tooltip {
+	position:relative;
+    z-index:24;
+    color:#000;
+    text-decoration:underline;
+    cursor: help;
+	}
+.tooltip:hover { 
+	z-index:25;
+}
+.tooltip span {
+	display: none
+	}
+.tooltip:hover span { 
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    width: 40em;
+    background-color: #eee;
+    color: #000;
+    text-align: left;
+    border: 2px outset #CA2BBD;
+    padding: 0.5em;
+}
+/** * extra styles for positioning the box individually * **/
+.tooltip span.righttop {
+	/* top-right */
+	top: auto;
+	bottom: 0.5em;
+	left: 0.5em;
+	right: auto;
+}
+.tooltip span.lefttop {
+	/* top-left */
+	top: auto;
+	bottom: 0.5em;
+	left: auto;
+	right: 0.5em;
+	text-decoration: none;
+}
+.tooltip span.leftbottom {
+	/* bottom-left */
+	top: 0.5em;
+	bottom: auto;
+	left: auto;
+	right: 0.5em;
+}
+.tooltip_tl {
+	position:static;
+}
+.tooltip_tl:hover span {
+	/* topleft static */
+	top: 0.5em;
+	left: 0.5em;
+	bottom: auto;
+	right: auto;
+}
+.tooltip_tl table {
+}
+
+/* ******************************** **/
+/* *********** ebayimport ********* **/
+/* ******************************** **/
+table.ebayimport {
+	
+}
+table.ebayimport td {
+	vertical-align: top;
+}
+table.ebayimport th.first,
+table.ebayimport td.first {
+	width: 70px;
+}
+table.ebayimport th.second,
+table.ebayimport td.second {
+	width: 10px;
+}
+table.ebayimport th.third,
+table.ebayimport td.third {
+	width: 200px;
+}
+table.ebayimport th.forth,
+table.ebayimport td.forth {
+	width: 20px;
+}
+table.ebayimport th.fifth,
+table.ebayimport td.fifth {
+	
+}
+table.ebayimport th.sixth,
+table.ebayimport td.sixth {
+	
+}
+
+
+/** ******************************* **/
+/** **** neues Kunden-Formular **** **/
+/** ******************************* **/
+.kunde-left {
+	position: absolute;
+	height: 550px;
+	width: 340px;
+	border: 1px solid black;
+	background-color: #D4D0C8;
+}
+.kunde-left table {
+	margin: 0 auto;
+}
+.kunde-left table th {
+	background-color: #D4D0C8;
+	width: 120px;
+}
+
+.kunde-left table tr input.breit{
+	width: 178px;
+}
+
+.kunde-left table tr.hell th {
+	background-color: silver;
+}
+.kunde-left table select {
+	width: 180px;
+}
+.kunde-left p {
+	margin-top: 70px;
+}
+.kunde-right {
+	position: relative;
+	margin-left: 345px;
+	border: 1px solid black;
+	height: 550px;
+	width: 1000px;
+	text-align: center;
+	background: #d4d0c8;
+	margin-bottom: 35px;
+	overflow: auto;
+}
+.kunde-right th {
+	vertical-align: bottom;
+}
+.kunde-right td {
+	vertical-align: top;	
+}
+.kunde-right .anz {
+	width: 30px;
+	text-align: center;
+}
+.kunde-right .anz input {
+	text-align: center;
+}
+.kunde-right th.artikel {
+	width: 70px;
+	text-align: center; 	
+}
+.kunde-right td.artikel {
+	width: 70px;
+}
+.kunde-right .bezeichnung {
+	
+}
+.kunde-right .preise {
+	width: 70px;
+	text-align: center;
+}
+.kunde-right .preise input {
+	width: 50px;
+	text-align: right;	
+}
+.kunde-right .daten {
+	width: 100px;
+	text-align: right;
+}
+.kunde-right .daten input {
+	text-align: center;
+	width: 80px;
+}
+.kunde-right .zahlungsbestellart {
+	text-align: right; 
+	width: 100px;
+}
+.kunde-right .zahlungsbestellart select  {
+	width: 80px;	
+}
+.kunde-right .loeschen {
+	width: 30px;
+	text-align: center;
+}
+.kunde-right .searchmask,
+.kunde-right .addedarticles {
+	margin: 5px;
+	padding: 10px;
+}
+.kunde-right .searchmask .searchitem {
+	float: left;
+	text-align: left;
+	margin-left: 10px;
+	line-height: 14px;
+}
+.kunde-right .searchmask .searchitem input[type="text"] {
+	width: 100px;
+}
+.kunde-right .searchmask input[type="button"] {
+	width: 120px;
+	cursor: pointer;
+}
+.kunde-right .searchmask #i-searchselectspan {
+	position: absolute;
+	top: 65px;
+	display: none;
+}
+.kunde-functions {
+	position: fixed;
+	bottom: 5px;
+	text-align: left;
+	background-color: #D4D4D4; /* #D4D0C8; */
+	border: 1px solid black;
+	width: 99%; /* 1345px; */
+	padding: 8px 10px; 
+}
+.kunde-functions label {
+	margin-right: 10px;
+}
+.kunde-functions input {
+	cursor: pointer;
+}
+.kunde-functions .statusmsg {
+	border: 1px solid black;
+	position: absolute; 
+	right: 0px;
+	padding: 6px;
+	text-align: center;
+}
+
+.kunde-right .addedarticles {
+	margin: 5px;
+	padding: 10px;
+}
+.kunde-right .addedarticles input[type="text"] {
+	width: 100px;
+}
+
+/** ******************************* **/
+/** ***** taskmanager windows ***** **/
+/** ******************************* **/
+#taskticker,
+#tasktoggle {
+	float: right;
+	position: relative;
+	right: 20px;
+}
+#tasktoggle {
+	position: absolute;
+	right: 320px;
+	bottom: 0px;
+}
+#taskticker div {
+	text-align: left;
+	position: absolute; 
+	right: 0px;
+	bottom: 0px;
+	width: 300px; 
+	height: 300px; 
+	border: 1px solid black; 
+	background-color: white; 
+	font-size: 10px;
+	overflow: scroll;
+	white-space: pre;
+}
+#taskticker div.smallview {
+	display: none;
+}
+#tasktoggle {
+	cursor: pointer;
+}
+/** ******************************* **/
+/** ***** main menu ***** **/
+/** ******************************* **/
+
+.btn {
+  background: #A94440 !important;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 37px !important;
+  padding: 53px 52px !important;
+  margin-top: 100px !important;
+  margin-left: 100px !important;
+  
+  
+  
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #a94449 !important;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}	
+	
+
