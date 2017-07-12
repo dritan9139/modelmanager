@@ -1,3 +1,3 @@
 <?php
-header("Location: " . $GLOBALS['HOST'] . "diagram/pie/");
+header("Location: " . $GLOBALS['HOST'] . "login/n/");
 ?>

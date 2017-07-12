@@ -8,6 +8,14 @@ class DbTable
 	public $_maintable;
 	public $_primary;
 	protected $_fields;
+	/*
+	 * example
+		array(	"idunterartikel" => "int",
+				"artikelnummer" =>	"varchar",
+				"bezeichnung" =>	"varchar",
+				"lagerbestand" =>	"int",
+				"wareneingang" =>	"date");
+	*/							
 	
 	private function buildSelectPart()
 	{
@@ -49,7 +57,14 @@ class DbTable
 			{
 				$this->_primary = $row['Field'];
 			}
-			
+/*			
+			Field
+			Type
+			Null
+			Key
+			Default
+			Extra
+*/			
 		}
 	}
 	

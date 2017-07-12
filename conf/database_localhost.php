@@ -2,7 +2,7 @@
 $strDbServ = 'localhost';
 $strDbUser = 'root';
 $strDbPass = ''; 
-$strDbBase = 'waldin';
+$strDbBase = 'foto';
 $con = mysql_connect($strDbServ, $strDbUser, $strDbPass);
 if (!$con) 
 {
