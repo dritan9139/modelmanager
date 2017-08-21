@@ -118,12 +118,12 @@ $GLOBALS['AJAX'] 	= $GLOBALS['HOST'].'ajax/';
 /**
  * MAILSERVER CONFIG FOR SENDING EMAILS
  */
-$GLOBALS['MAIL_SENDER_EMAIL']	= 'info@waldin.info';
-$GLOBALS['MAIL_SENDER_NAME']	= 'www.waldin.de Nachricht';
+$GLOBALS['MAIL_SENDER_EMAIL']	= 'info@test.info';
+$GLOBALS['MAIL_SENDER_NAME']	= 'www.test.de Nachricht';
 $GLOBALS['EMAIL_IMPORT_DATEN']	= array('host' => 'pop.1und1.de',
 										'port' => 110,
-										'user' => 'abgleich@hundebett24.eu',
-										'pass' => 'turboluki');
+										'user' => 'test@htest.al',
+										'pass' => 'fdsf');
 $GLOBALS['NACHNAHME_POSTGEBUEHR']   = 2.00;
 $GLOBALS['NACHNAHME_AUFSCHLAG']     = 5.00;
 
