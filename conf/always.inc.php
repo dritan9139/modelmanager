@@ -35,21 +35,11 @@ if( $GLOBALS['LIVESYSTEM'] )
 	set_time_limit(0);
 	
 	$GLOBALS['HOST']                = 'http://' . $_SERVER['HTTP_HOST'] . '/';
-	$GLOBALS['HOSTRE']              = 'http://rechnung.waldin.de/';
-	$GLOBALS['HOSTLS']              = 'http://lieferschein.waldin.de/';
+
 	$GLOBALS['MAILSTOCUSTOMER']	= true;
 	require_once("database_live.php");
 	
-	$GLOBALS['POLLING_PFAD_DHL']		= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/dhl//';
-	$GLOBALS['POLLING_PFAD_DPD']		= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/dpd//';
-	$GLOBALS['POLLING_PFAD_DPDKP']		= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/dpd//';
-	$GLOBALS['POLLING_PFAD_BACKUP']		= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/backup//';
-	$GLOBALS['POLLINGRES_PFAD_DHL']		= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/dhl_done//';
-	$GLOBALS['POLLINGRES_PFAD_DPD']		= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/dpd_done//';
-	$GLOBALS['POLLINGRES_PFAD_DPDKP']	= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/dpd_done//';		
-	$GLOBALS['POLLINGBACKUP_PFAD_DHL']	= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/dhl_backup//';
-	$GLOBALS['POLLINGBACKUP_PFAD_DPD']	= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/dpd_backup//';
-	$GLOBALS['POLLINGBACKUP_PFAD_DPDKP']= '/kunden/homepages/46/d24050651/htdocs/waldinde/polling/dpd_backup//';	
+
 			
 	$GLOBALS['MAILTEST_PFAD']       	= dirname(__FILE__).'/../temp/';
 	$GLOBALS['TEMP_PFAD']       		= dirname(__FILE__).'/../temp/';
@@ -57,9 +47,7 @@ if( $GLOBALS['LIVESYSTEM'] )
 	$GLOBALS['TPL_PFAD']        		= dirname(__FILE__).'/../templates/';
 	$GLOBALS['LOG_PFAD']        		= dirname(__FILE__).'/../logs/';
 	$GLOBALS['SYSTEM_PFAD']        		= dirname(__FILE__).'/../';
-	$GLOBALS['RECHNUNGEN_PFAD']     	= '/kunden/homepages/46/d24050651/htdocs/waldinde/rechnung//';
-	$GLOBALS['LIEFERSCHEIN_PFAD']   	= '/kunden/homepages/46/d24050651/htdocs/waldinde/lieferschein//';
-	$GLOBALS['WALDIN_IMPORT_PFAD']  	= '/kunden/homepages/46/d24050651/htdocs/waldinde/bestellungen//';
+
 	
 	$GLOBALS['EBAY_DISABLE_PUSHFUNCS'] = false;
 	$GLOBALS['EBAY_IMPORT_HOURS_DEFAULT'] = 6;
@@ -97,7 +85,7 @@ else
     $GLOBALS['SYSTEM_PFAD']        	= dirname(__FILE__).'\..\\';    
     $GLOBALS['RECHNUNGEN_PFAD']     = dirname(__FILE__).'\..\..\rechnung\\';
     $GLOBALS['LIEFERSCHEIN_PFAD']   = dirname(__FILE__).'\..\..\lieferschein\\';
-    $GLOBALS['WALDIN_IMPORT_PFAD']  = dirname(__FILE__).'\..\..\bestellungen\\'; 
+
 
     $GLOBALS['EBAY_DISABLE_PUSHFUNCS'] = false;    
     $GLOBALS['EBAY_IMPORT_HOURS_DEFAULT'] = 6;
